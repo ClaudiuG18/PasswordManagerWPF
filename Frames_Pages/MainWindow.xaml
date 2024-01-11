@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frames_Pages"
         mc:Ignorable="d"
-        Title="PasswordManager" Height="1000" Width="1800" WindowStartupLocation="CenterScreen">
+        Title="PasswordManager" Height="1000" Width="1800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Window.Background>
-        <ImageBrush ImageSource="Resources/bg1.jpg"/>
+        <ImageBrush ImageSource="Resources/bgDarkEnhanced.jpg"/>
     </Window.Background>
     <Frame x:Name="frame" Content=""  NavigationUIVisibility="Hidden" />
     <Window.Icon>

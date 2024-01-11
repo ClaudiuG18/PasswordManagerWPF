@@ -157,6 +157,12 @@
   <ItemGroup>
     <Resource Include="Resources\bg1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bgDark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bgDarkEnhanced.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
