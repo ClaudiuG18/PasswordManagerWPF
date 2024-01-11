@@ -5,21 +5,21 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Frames_Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="969" d:DesignWidth="1792"
       Title="MainPage">
 
     <Grid>
-        <Image Source="./Resources/background.png" />
-        <Label Content="Login" HorizontalAlignment="Left" Margin="72,63,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Foreground="#FF458D84" Width="148"/>
-        <TextBox x:Name="usernameBox"  Foreground="Gray" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Height="30" Margin="72,165,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="148" Background="#FF5AD90E" FontSize="20" />
-        <PasswordBox x:Name="passwordBox" Password="" PasswordChar="*"  Margin="72,211,580,209" 
-            Background="#FF5AD90E"  FontSize="20" Visibility="Collapsed" LostFocus="PlaceholderPasswordBox_LostFocus"/>
-        <TextBox x:Name="placeholderTextBox" Text="Password" Foreground="Gray"
-            GotFocus="PlaceholderTextBox_GotFocus" Margin="72,211,580,209" FontSize="20" Background="#FF5AD90E"/>
-        <Button x:Name="loginBtn" Content="Login" HorizontalAlignment="Left" Margin="72,260,0,0" VerticalAlignment="Top" Width="148" Height="30" Background="#FF3B7F7B" FontSize="18" Click="LoginBtn_Click"/>
-        <Button x:Name="registerBtn" Content="Register" HorizontalAlignment="Left" Margin="619,358,0,0" VerticalAlignment="Top" Width="158" Height="30" Background="#FF3B7F7B" FontSize="18" Click="RegisterBtn_Click"/>
-        <Label Content="Not a user? Please register! " HorizontalAlignment="Left" Margin="619,320,0,0" VerticalAlignment="Top" Width="158" Height="33" Foreground="#FF1A726E"/>
 
-       
+        <Label Content="Login" HorizontalAlignment="Left" Margin="888,294,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Foreground="#FF458D84" Width="182"/>
+        <TextBox x:Name="usernameBox"  Foreground="Gray" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Left" Height="40" Margin="888,440,0,0" Text="Username" VerticalAlignment="Top" Width="182" Background="#FF9AEC69" FontSize="20" MaxWidth="200" MaxHeight="50" Padding="2" />
+        <PasswordBox x:Name="passwordBox" Password="" PasswordChar="*"  Margin="890,497,722,432" 
+            Background="#FFFEE68E"  FontSize="20" Visibility="Visible" LostFocus="PlaceholderPasswordBox_LostFocus" Height="40" MaxWidth="200" MaxHeight="50" Padding="2"/>
+        <TextBox x:Name="placeholderTextBox" Text="Password" Foreground="Gray"
+            GotFocus="PlaceholderTextBox_GotFocus" Margin="888,497,722,432" FontSize="20" Background="#FF94DE68" MaxWidth="200" MaxHeight="50" Padding="2"/>
+        <Button x:Name="loginBtn" Content="Login" HorizontalAlignment="Left" Margin="890,558,0,0" VerticalAlignment="Top" Width="180" Height="30" Background="#FF3B7F7B" FontSize="18" Click="LoginBtn_Click"/>
+        <Button x:Name="registerBtn" Content="Register" HorizontalAlignment="Left" Margin="74,896,0,0" VerticalAlignment="Top" Width="180" Height="30" Background="#FF3B7F7B" FontSize="18" Click="RegisterBtn_Click"/>
+        <Label Content="Not a user? Please register! " HorizontalAlignment="Left" Margin="64,858,0,0" VerticalAlignment="Top" Width="190" Height="33" Foreground="#FF1A726E"/>
+
+
     </Grid>
 </Page>
