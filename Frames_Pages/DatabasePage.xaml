@@ -9,24 +9,33 @@
       Title="Page2">
 
     <Grid>
-       
-        <Button x:Name="LogOutBtn" Click="LogoutBtn" Content="Logout" HorizontalAlignment="Left" Margin="725,362,0,0" VerticalAlignment="Top" Width="65" Background="#FF375759" FontSize="18"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Width="557" Background="#FF096F76" FontSize="18" AutoGenerateColumns="False" HeadersVisibility="Column" RowBackground="#FF226C68">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Username}"    FontSize="18" CanUserResize="False" Header="Username"    MinWidth="200" />
-                <DataGridTextColumn Binding="{Binding Password}"    FontSize="18" CanUserResize="False" Header="Password"    MinWidth="200"/>
-                <DataGridTextColumn Binding="{Binding Application}" FontSize="18" CanUserResize="False" Header="Application" MinWidth="200"/>
-            </DataGrid.Columns>
+
+        <Button x:Name="LogOutBtn" Click="LogoutBtn" Content="Logout" HorizontalAlignment="Left" Margin="1417,880,0,0" VerticalAlignment="Top" Width="180" Background="#FF375759" FontSize="20" Height="50"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Width="557" Background="{x:Null}" FontSize="18" HeadersVisibility="Column" BorderBrush="{x:Null}" Foreground="White" RowDetailsVisibilityMode="Visible" RowBackground="#FF2E2E2E" CanUserDeleteRows="False" >
+          
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background" Value="LightGray" />
-                    <Setter Property="Foreground" Value="DarkBlue" />
+                    <Setter Property="Background" Value="#FF181B1B" />
+                    <Setter Property="Foreground" Value="#FF375759" />
                     <Setter Property="FontWeight" Value="Bold" />
                 </Style>
             </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Resources>
+                <!-- Style for Rows -->
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Opacity" Value="0.5"/>
+                    
+                </Style>
+
+                <!-- Style for Columns -->
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Opacity" Value="0.5"/>
+                    
+                </Style>
+            </DataGrid.Resources>
         </DataGrid>
-        <Button x:Name="SaveBtn" Content="Save" Background="#FF375759" FontSize="18" Margin="562,77,163,293" Click="SaveBtn_Click" Height="30" MaxHeight="30" Width="80"/>
-        <Button x:Name="DeleteBtn" Content="Delete" Background="#FF375759" FontSize="18" Margin="562,123,163,249" Click="DeleteBtn_Click" Width="80" Height="30" MaxHeight="30"/>
+        <Button x:Name="SaveBtn" Content="Save" Background="#FF375759" FontSize="20" Margin="1417,613,195,306" Click="SaveBtn_Click" Height="50"/>
+        <Button x:Name="DeleteBtn" Content="Delete" Background="#FF375759" FontSize="20" Margin="1417,692,195,227" Click="DeleteBtn_Click" Height="50" />
 
     </Grid>
 

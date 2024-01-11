@@ -11,7 +11,7 @@
     </Window.Background>
     <Frame x:Name="frame" Content=""  NavigationUIVisibility="Hidden" />
     <Window.Icon>
-        <BitmapImage UriSource="C:\Users\ghise\source\repos\Frames_Pages\Frames_Pages\Resources\padlockicon.png" ></BitmapImage>
+        <BitmapImage UriSource="\Resources\padlockicon.png" ></BitmapImage>
     </Window.Icon>
 </Window>
 

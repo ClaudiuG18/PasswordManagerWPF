@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frames_Pages"
         mc:Ignorable="d"
-        Title="Message" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" d:DesignWidth="350.639" SizeToContent="WidthAndHeight">
+        Title="Message" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"  SizeToContent="WidthAndHeight">
     <Grid>
        
         <Grid.Background>
-            <ImageBrush ImageSource="Resources/messageboxbackground.png"/>
+            <ImageBrush ImageSource="Resources/bgDarkEnhanced.jpg"/>
         </Grid.Background>
-        <TextBlock x:Name="CustomText" Text="" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFC0000" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2" Margin="13,55,11.6,54"/>
+        <TextBlock x:Name="CustomText" Text="" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2" Margin="13,55,11.6,54"/>
         <Button Content="OK" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="113,0,112.6,10" Click="OKButton_Click" Width="68" Height="19" Grid.ColumnSpan="2" Background="#FF338A8A"/>
     </Grid>
 </Window>

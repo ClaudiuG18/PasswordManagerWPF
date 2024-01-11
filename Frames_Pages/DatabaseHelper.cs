@@ -86,16 +86,18 @@ namespace Frames_Pages
                     command.Parameters.AddWithValue("@Password", user.Password);
                     command.ExecuteNonQuery();
                 }
+                
             }
         }
 
-        public static void InsertData(UserData user)
+        public static void InsertData(UserData user, string tablename)
         {
             using (SQLiteConnection connection = GetSQLiteConnection())
             {
                 connection.Open();
-
-                string insertQuery = "INSERT INTO UserData (UserName, Password, Application) VALUES (@UserName, @Password, @Application);";
+                
+                string table = tablename;
+                string insertQuery = $"INSERT INTO {table} (UserName, Password, Application) VALUES (@UserName, @Password, @Application);";
 
                 using (SQLiteCommand command = new SQLiteCommand(insertQuery, connection))
                 {
@@ -105,6 +107,7 @@ namespace Frames_Pages
 
                     command.ExecuteNonQuery();
                 }
+                connection.Close(); 
             }
         }
 
@@ -162,8 +165,9 @@ namespace Frames_Pages
                         }
                     }
                 }
+                connection.Close(); 
             }
-
+            
             return userData;
         }
     }

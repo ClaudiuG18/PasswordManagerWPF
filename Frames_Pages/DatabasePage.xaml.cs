@@ -18,16 +18,26 @@ namespace Frames_Pages
 
     public partial class Page2 : Page
     {
-        
 
+        string tableName;
         public Page2(string tablename)
         {
             InitializeComponent();
             string table = tablename;
             dataGrid.ItemsSource = DatabaseHelper.GetUserData(table);
+            tableName = table;   
         }
 
-      
+        private void AddNewRow(string username, string password, string app)
+        {
+            // Add a new person to the data source
+            var newData = new UserData { Username = username, Password = password, Application = app };
+            DatabaseHelper.InsertData(newData, tableName);
+
+            dataGrid.ItemsSource = DatabaseHelper.GetUserData(tableName);
+            // Refresh the DataGrid to reflect the changes
+            dataGrid.Items.Refresh();
+        }
         private void LogoutBtn(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Uri("MainPage.xaml", UriKind.Relative));
@@ -35,7 +45,7 @@ namespace Frames_Pages
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-           
+            AddNewRow("kkk", "aaaa", "dsdsds");
         }
 
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)

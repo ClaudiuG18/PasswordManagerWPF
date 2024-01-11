@@ -30,6 +30,6 @@ namespace Frames_Pages
             set { this.app = value; }
         }
 
-        public string AllData => $"{Username}{Password}{Application}";
+        
     }
 }
