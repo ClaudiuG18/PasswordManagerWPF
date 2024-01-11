@@ -1,0 +1,21 @@
+﻿<Page x:Class="Frames_Pages.RegPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Frames_Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RegPage">
+
+    <Grid>
+        <Image Source="./Resources/background.png" />
+        <Button x:Name="registerBtn" Content="Register" FontSize="18" HorizontalAlignment="Left" Margin="118,282,0,0" VerticalAlignment="Top" Width="100" Height="30" RenderTransformOrigin="-0.203,0.79" Background="#FF338A8A" Click="RegisterBtn_Click"/>
+        <TextBox x:Name="usernameTxtBox" Text="Username" Foreground="Gray" FontSize="20"  HorizontalAlignment="Left" Height="30" Margin="94,190,0,0" TextWrapping="Wrap" 
+                 GotFocus="TextBox_GotFocus"  LostFocus="TextBox_LostFocus" VerticalAlignment="Top" Width="150" Background="#FF6BE70F"/>
+        <TextBox x:Name="passwordTxtBox" Text="Password" Foreground="Gray" FontSize="20"  HorizontalAlignment="Left" Height="30" Margin="94,236,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" Background="#FF6BE70F"
+                 GotFocus="PassBox_GotFocus"  LostFocus="PassBox_LostFocus"/>
+        <Button  x:Name="backBtn" Content="Login" HorizontalAlignment="Left" Margin="668,373,0,0" VerticalAlignment="Top" Width="75" Click="BackBtn_Click" Background="#FF338A8A" FontSize="18"/>
+        <Label Content="Register" HorizontalAlignment="Left" Margin="94,119,0,0" VerticalAlignment="Top" Width="150" Foreground="#FF338A8A" FontSize="36" FontWeight="Bold" RenderTransformOrigin="0.507,0.064"/>
+    </Grid>
+</Page>
