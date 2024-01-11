@@ -38,16 +38,6 @@ namespace Frames_Pages
             // Refresh the DataGrid to reflect the changes
             dataGrid.Items.Refresh();
         }
-        private void LogoutBtn(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("MainPage.xaml", UriKind.Relative));
-        }
-
-        private void SaveBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AddNewRow("kkk", "aaaa", "dsdsds");
-        }
-
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
             if (dataGrid.Items.Count > 0)
@@ -63,6 +53,91 @@ namespace Frames_Pages
 
                     // Process the data as needed
                 }
+            }
+        }
+
+        private void LogoutBtn(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new Uri("MainPage.xaml", UriKind.Relative));
+            
+        }
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if ((string.IsNullOrEmpty(AddUsername.Text) && string.IsNullOrEmpty(AddPassword.Text) && string.IsNullOrEmpty(AddApp.Text))
+                || (AddUsername.Text == "Add a username" && AddPassword.Text == "Add a password" && AddApp.Text == "Add a application"))
+            {
+                CustomMessageBox a = new CustomMessageBox("Add a username a password and a application !");  
+                a.ShowDialog();
+            }
+            else
+            {
+                AddNewRow(AddUsername.Text, AddPassword.Text, AddApp.Text);
+                AddUsername.Clear(); AddPassword.Clear(); AddApp.Clear();
+            }
+            
+        }
+
+
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (textBox.Text == "Add a username")
+            {
+                textBox.Text = "";
+                textBox.Foreground = Brushes.Black; // Set to the actual text color when focused
+                
+            }
+        }
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                AddUsername.Text = "Add a username";
+                AddUsername.Foreground = Brushes.Black; // Set back to the placeholder color when not focused
+            }
+        }
+
+        private void TextBox_GotFocusPass(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (textBox.Text == "Add a password")
+            {
+                textBox.Text = "";
+                textBox.Foreground = Brushes.Black; // Set to the actual text color when focused
+               
+            }
+        }
+        private void TextBox_LostFocusPass(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox2 = (TextBox)sender;
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                AddPassword.Text = "Add a password";
+                AddPassword.Foreground = Brushes.Black; // Set back to the placeholder color when not focused
+            }
+        }
+
+        private void TextBox_GotFocusApp(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (textBox.Text == "Add a application")
+            {
+                textBox.Text = "";
+                textBox.Foreground = Brushes.Black; // Set to the actual text color when focused
+
+            }
+        }
+        private void TextBox_LostFocusApp(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox2 = (TextBox)sender;
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                AddApp.Text = "Add a application";
+                AddApp.Foreground = Brushes.Black; // Set back to the placeholder color when not focused
             }
         }
     }

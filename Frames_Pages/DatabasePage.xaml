@@ -12,7 +12,7 @@
 
         <Button x:Name="LogOutBtn" Click="LogoutBtn" Content="Logout" HorizontalAlignment="Left" Margin="1417,880,0,0" VerticalAlignment="Top" Width="180" Background="#FF375759" FontSize="20" Height="50"/>
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Width="557" Background="{x:Null}" FontSize="18" HeadersVisibility="Column" BorderBrush="{x:Null}" Foreground="White" RowDetailsVisibilityMode="Visible" RowBackground="#FF2E2E2E" CanUserDeleteRows="False" >
-          
+
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="#FF181B1B" />
@@ -24,19 +24,36 @@
                 <!-- Style for Rows -->
                 <Style TargetType="DataGridRow">
                     <Setter Property="Opacity" Value="0.5"/>
-                    
+
                 </Style>
 
                 <!-- Style for Columns -->
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="Opacity" Value="0.5"/>
-                    
+
                 </Style>
             </DataGrid.Resources>
         </DataGrid>
         <Button x:Name="SaveBtn" Content="Save" Background="#FF375759" FontSize="20" Margin="1417,613,195,306" Click="SaveBtn_Click" Height="50"/>
         <Button x:Name="DeleteBtn" Content="Delete" Background="#FF375759" FontSize="20" Margin="1417,692,195,227" Click="DeleteBtn_Click" Height="50" />
-
+        <TextBox x:Name="AddUsername" Text="Add a username" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"  FontSize="20" Margin="1411,403,195,508" BorderBrush="{x:Null}"
+                 SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" >
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="AddPassword" Text="Add a password" GotFocus="TextBox_GotFocusPass" LostFocus="TextBox_LostFocusPass"  FontSize="20" Margin="1411,466,195,445" BorderBrush="{x:Null}"
+         SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" >
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="AddApp" Text="Add a application" GotFocus="TextBox_GotFocusApp" LostFocus="TextBox_LostFocusApp"  FontSize="20" Margin="1411,529,195,382" BorderBrush="{x:Null}"
+    SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" >
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
     </Grid>
 
 </Page>
