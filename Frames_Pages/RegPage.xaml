@@ -5,17 +5,25 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Frames_Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="969" d:DesignWidth="1792"
       Title="RegPage">
 
     <Grid>
-       
-        <Button x:Name="registerBtn" Content="Register" FontSize="18" HorizontalAlignment="Left" Margin="118,282,0,0" VerticalAlignment="Top" Width="100" Height="30" RenderTransformOrigin="-0.203,0.79" Background="#FF338A8A" Click="RegisterBtn_Click"/>
-        <TextBox x:Name="usernameTxtBox" Text="Username" Foreground="Gray" FontSize="20"  HorizontalAlignment="Left" Height="30" Margin="94,190,0,0" TextWrapping="Wrap" 
-                 GotFocus="TextBox_GotFocus"  LostFocus="TextBox_LostFocus" VerticalAlignment="Top" Width="150" Background="#FF6BE70F"/>
-        <TextBox x:Name="passwordTxtBox" Text="Password" Foreground="Gray" FontSize="20"  HorizontalAlignment="Left" Height="30" Margin="94,236,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" Background="#FF6BE70F"
-                 GotFocus="PassBox_GotFocus"  LostFocus="PassBox_LostFocus"/>
-        <Button  x:Name="backBtn" Content="Login" HorizontalAlignment="Left" Margin="668,373,0,0" VerticalAlignment="Top" Width="75" Click="BackBtn_Click" Background="#FF338A8A" FontSize="18"/>
-        <Label Content="Register" HorizontalAlignment="Left" Margin="94,119,0,0" VerticalAlignment="Top" Width="150" Foreground="#FF338A8A" FontSize="36" FontWeight="Bold" RenderTransformOrigin="0.507,0.064"/>
+
+        <Button x:Name="registerBtn" Content="Register" FontSize="18" HorizontalAlignment="Left" Margin="796,756,0,0" VerticalAlignment="Top" Width="186" Height="50" RenderTransformOrigin="-0.203,0.79" Background="#FF338A8A" Click="RegisterBtn_Click"/>
+        <TextBox x:Name="usernameTxtBox" Text="Username" Foreground="#FF0A0000" FontSize="20" Margin="796,640,0,0" HorizontalAlignment="Left" Height="50"  TextWrapping="Wrap" 
+                 GotFocus="TextBox_GotFocus"  LostFocus="TextBox_LostFocus" VerticalAlignment="Top" Width="186" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0">
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="passwordTxtBox" Text="Password" Foreground="Black" FontSize="20"  HorizontalAlignment="Left" Height="50" Margin="796,695,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="186"
+                 GotFocus="PassBox_GotFocus"  LostFocus="PassBox_LostFocus" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0">
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <Button  x:Name="backBtn" Content="Back to login" HorizontalAlignment="Left" Margin="796,811,0,0" VerticalAlignment="Top" Width="186" Click="BackBtn_Click" Background="#FF338A8A" FontSize="18" Height="50"/>
+        <Label Content="Register" HorizontalAlignment="Left" Margin="753,248,0,0" VerticalAlignment="Top" Width="275" Foreground="#FF338A8A" FontSize="68" FontWeight="Bold" RenderTransformOrigin="0.507,0.064"/>
     </Grid>
 </Page>

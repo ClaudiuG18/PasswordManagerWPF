@@ -16,25 +16,26 @@
             </Label.Foreground>
         </Label>
 
-        <TextBox x:Name="usernameBox" Text="Username" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"  FontSize="20" Foreground="#FF514F4F" Margin="796,631,810,279" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" >
+        <TextBox x:Name="usernameBox" Text="Username" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"  FontSize="20" Margin="796,631,810,279" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" >
+         
             <TextBox.Background>
                 <SolidColorBrush Color="White" Opacity="0.5"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="placeholderTextBox" Text=" Password" Foreground="#FF514F4F" FontSize="20" GotFocus="PlaceholderTextBox_GotFocus" Margin="796,695,810,215" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" >
+        <TextBox x:Name="placeholderTextBox" Text=" Password" Foreground="Black" FontSize="20" GotFocus="PlaceholderTextBox_GotFocus" Margin="796,695,810,215" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" >
             <TextBox.Background>
                 <SolidColorBrush Color="#FFF9F5F5" Opacity="0.5"/>
             </TextBox.Background>
         </TextBox>
-
-        <Button x:Name="loginBtn" Content="Login" HorizontalAlignment="Left" Margin="798,787,0,0" VerticalAlignment="Top" Width="180" Height="50" Background="#FF3B7F7B" FontSize="18" Click="LoginBtn_Click"/>
-        <Button x:Name="registerBtn" Content="Register" HorizontalAlignment="Left" Margin="799,892,0,0" VerticalAlignment="Top" Width="180" Height="50" Background="#FF3B7F7B" FontSize="18" Click="RegisterBtn_Click"/>
-        <Label Content="Not a user? Please register! " HorizontalAlignment="Left" Margin="810,854,0,0" VerticalAlignment="Top" Width="167" Height="33" Foreground="#FF1A726E"/>
-        <PasswordBox x:Name="passwordBox" Password="" PasswordChar="*"  FontSize="20" Visibility="Collapsed" LostFocus="PlaceholderPasswordBox_LostFocus" Margin="800,559,806,351" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0">
+        <PasswordBox x:Name="passwordBox" Password="" PasswordChar="*"  FontSize="20" Visibility="Collapsed" LostFocus="PlaceholderPasswordBox_LostFocus" Margin="796,695,810,215" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0">
             <PasswordBox.Background>
                 <SolidColorBrush Color="White" Opacity="0.5"/>
             </PasswordBox.Background>
         </PasswordBox>
+        <Button x:Name="loginBtn" Content="Login" HorizontalAlignment="Left" Margin="798,787,0,0" VerticalAlignment="Top" Width="180" Height="50" Background="#FF3B7F7B" FontSize="18" Click="LoginBtn_Click"/>
+        <Button x:Name="registerBtn" Content="Register" HorizontalAlignment="Left" Margin="799,892,0,0" VerticalAlignment="Top" Width="180" Height="50" Background="#FF3B7F7B" FontSize="18" Click="RegisterBtn_Click"/>
+        <Label Content="Not a user? Please register! " HorizontalAlignment="Left" Margin="810,854,0,0" VerticalAlignment="Top" Width="167" Height="33" Foreground="#FF1A726E"/>
+
 
 
     </Grid>

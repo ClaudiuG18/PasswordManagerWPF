@@ -51,7 +51,7 @@ namespace Frames_Pages
             if (string.IsNullOrWhiteSpace(textBox.Text))
             {
                 textBox.Text = "Username";
-                textBox.Foreground = Brushes.Gray; // Set back to the placeholder color when not focused
+                textBox.Foreground = Brushes.Black; // Set back to the placeholder color when not focused
             }
         }
 

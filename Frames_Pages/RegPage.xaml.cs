@@ -47,7 +47,7 @@ namespace Frames_Pages
             {
 
                 textBox.Text = "Username";
-                textBox.Foreground = Brushes.Gray; // Set to the actual text color when focused
+                textBox.Foreground = Brushes.Black; // Set to the actual text color when focused
 
             }
         }
@@ -72,7 +72,7 @@ namespace Frames_Pages
             {
 
                 textBox.Text = "Password";
-                textBox.Foreground = Brushes.Gray; // Set to the actual text color when focused
+                textBox.Foreground = Brushes.Black; // Set to the actual text color when focused
 
             }
         }
