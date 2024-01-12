@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frames_Pages"
         mc:Ignorable="d"
-        Title="PasswordManager" Height="1000" Width="1800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+ 
+        Title="PasswordManager"  WindowStartupLocation="CenterScreen" ResizeMode="CanResize" MinHeight="500" MinWidth="500">
     <Window.Background>
         <ImageBrush ImageSource="Resources/bgDarkEnhanced.jpg"/>
     </Window.Background>
-    <Frame x:Name="frame" Content=""  NavigationUIVisibility="Hidden" />
+    <Viewbox Stretch="Uniform">
+        <Frame x:Name="frame" Content=""  NavigationUIVisibility="Hidden" />
+    </Viewbox>
+    
     <Window.Icon>
         <BitmapImage UriSource="\Resources\padlockicon.png" ></BitmapImage>
     </Window.Icon>

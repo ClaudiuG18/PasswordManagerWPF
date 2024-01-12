@@ -5,38 +5,37 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Frames_Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="969" d:DesignWidth="1792"
+      d:DesignHeight="900" d:DesignWidth="1600"
       Title="MainPage">
+    <Viewbox Stretch="Uniform">
+        <Grid>
 
-    <Grid>
+            <Label Content="Login" Margin="781,250,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="68" Width="210" HorizontalAlignment="Left" HorizontalContentAlignment="Center">
+                <Label.Foreground>
+                    <SolidColorBrush Color="#FF458D84" Opacity="0.9"/>
+                </Label.Foreground>
+            </Label>
+            <TextBox x:Name="usernameBox" MinHeight="60" MinWidth="180" MaxWidth="180" Text="Username" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"  FontSize="20" Margin="796,631,810,279" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" >
 
-        <Label Content="Login" Margin="781,250,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="68" Width="210" HorizontalAlignment="Left" HorizontalContentAlignment="Center">
-            <Label.Foreground>
-                <SolidColorBrush Color="#FF458D84" Opacity="0.9"/>
-            </Label.Foreground>
-        </Label>
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </TextBox.Background>
+            </TextBox>
+            <TextBox x:Name="placeholderTextBox"  MinHeight="60" MinWidth="180" MaxWidth="180" Text=" Password" Foreground="Black" FontSize="20" GotFocus="PlaceholderTextBox_GotFocus" Margin="796,695,810,215" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" >
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FFF9F5F5" Opacity="0.5"/>
+                </TextBox.Background>
+            </TextBox>
+            <PasswordBox x:Name="passwordBox" Password=""  MinHeight="60" MinWidth="180" MaxWidth="180" PasswordChar="*"  FontSize="20" Visibility="Collapsed" LostFocus="PlaceholderPasswordBox_LostFocus" Margin="796,695,810,215" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0">
+                <PasswordBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </PasswordBox.Background>
+            </PasswordBox>
+            <Button x:Name="loginBtn" Content="Login" HorizontalAlignment="Left" Margin="798,787,0,0" VerticalAlignment="Top" Width="180" Height="50" Background="#FF3B7F7B" FontSize="18" Click="LoginBtn_Click"/>
+            <Button x:Name="registerBtn" Content="Register" HorizontalAlignment="Left" Margin="799,892,0,0" VerticalAlignment="Top" Width="180" Height="50" Background="#FF3B7F7B" FontSize="18" Click="RegisterBtn_Click"/>
+            <Label Content="Not a user? Please register! " HorizontalAlignment="Left" Margin="810,854,0,0" VerticalAlignment="Top" Width="167" Height="33" Foreground="#FF1A726E"/>
 
-        <TextBox x:Name="usernameBox" Text="Username" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"  FontSize="20" Margin="796,631,810,279" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" >
-         
-            <TextBox.Background>
-                <SolidColorBrush Color="White" Opacity="0.5"/>
-            </TextBox.Background>
-        </TextBox>
-        <TextBox x:Name="placeholderTextBox" Text=" Password" Foreground="Black" FontSize="20" GotFocus="PlaceholderTextBox_GotFocus" Margin="796,695,810,215" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" >
-            <TextBox.Background>
-                <SolidColorBrush Color="#FFF9F5F5" Opacity="0.5"/>
-            </TextBox.Background>
-        </TextBox>
-        <PasswordBox x:Name="passwordBox" Password="" PasswordChar="*"  FontSize="20" Visibility="Collapsed" LostFocus="PlaceholderPasswordBox_LostFocus" Margin="796,695,810,215" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0">
-            <PasswordBox.Background>
-                <SolidColorBrush Color="White" Opacity="0.5"/>
-            </PasswordBox.Background>
-        </PasswordBox>
-        <Button x:Name="loginBtn" Content="Login" HorizontalAlignment="Left" Margin="798,787,0,0" VerticalAlignment="Top" Width="180" Height="50" Background="#FF3B7F7B" FontSize="18" Click="LoginBtn_Click"/>
-        <Button x:Name="registerBtn" Content="Register" HorizontalAlignment="Left" Margin="799,892,0,0" VerticalAlignment="Top" Width="180" Height="50" Background="#FF3B7F7B" FontSize="18" Click="RegisterBtn_Click"/>
-        <Label Content="Not a user? Please register! " HorizontalAlignment="Left" Margin="810,854,0,0" VerticalAlignment="Top" Width="167" Height="33" Foreground="#FF1A726E"/>
-
-
-
-    </Grid>
+        </Grid>
+    </Viewbox>
+  
 </Page>
